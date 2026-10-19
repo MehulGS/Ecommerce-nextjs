@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ivory: #FAF6EE;
+  --color-blush: #F49BB5;
+  --color-plum: #3D1C3C;
+  --color-gold: #C9A96E;
+  --color-lavender: #C4B5FD;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-plum font-sans;
+    font-feature-settings: 'kern', 'liga';
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  * {
+    @apply border-blush-100;
+  }
+
+  ::selection {
+    @apply bg-blush-200 text-plum;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-plum text-ivory font-sans font-medium rounded-full hover:bg-plum-700 transition-all duration-200 shadow-button hover:shadow-hover active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-ivory text-plum border-2 border-plum font-sans font-medium rounded-full hover:bg-plum hover:text-ivory transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-gold text-ivory font-sans font-medium rounded-full hover:bg-gold-dark transition-all duration-200 shadow-button hover:shadow-hover active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-plum font-sans font-medium rounded-full hover:bg-blush-50 transition-all duration-200 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft border border-blush-100 overflow-hidden;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-hover transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-new {
+    @apply badge bg-lavender-100 text-plum-700;
+  }
+
+  .badge-sale {
+    @apply badge bg-blush-100 text-blush-600;
+  }
+
+  .badge-bestseller {
+    @apply badge bg-peach-100 text-gold-dark;
+  }
+
+  .badge-outofstock {
+    @apply badge bg-gray-100 text-gray-600;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-blush-200 rounded-xl text-plum placeholder-plum/40 focus:outline-none focus:ring-2 focus:ring-blush-300 focus:border-blush-300 transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-plum mb-1.5;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-serif font-semibold text-plum;
+  }
+
+  .section-subtitle {
+    @apply text-base text-plum/60 mt-2;
+  }
+
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .divider {
+    @apply border-t border-blush-100 my-8;
+  }
+
+  .product-card {
+    @apply bg-white rounded-2xl overflow-hidden shadow-soft border border-blush-100 hover:shadow-hover transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .nav-link {
+    @apply text-plum/70 hover:text-plum font-sans text-sm font-medium transition-colors duration-200 relative;
+  }
+
+  .admin-sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 text-plum/70 hover:text-plum hover:bg-blush-50 rounded-xl transition-all duration-200 font-medium;
+  }
+
+  .admin-sidebar-link.active {
+    @apply text-plum bg-blush-100 font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #F49BB5 #FAF6EE;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #FAF6EE;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #F49BB5;
+    border-radius: 20px;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+}
+
+/* Custom scrollbar for cart drawer */
+.cart-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #F49BB5 #FAF6EE;
+}
+
+/* Price display */
+.price-original {
+  @apply text-plum/40 line-through text-sm;
+}
+
+.price-current {
+  @apply text-plum font-semibold;
+}
+
+/* Loading skeleton */
+.skeleton {
+  @apply animate-pulse bg-blush-100 rounded;
+}
+
+/* Image zoom effect */
+.image-zoom {
+  overflow: hidden;
+}
+.image-zoom img {
+  transition: transform 0.5s ease;
+}
+.image-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Announcement bar */
+.announcement-bar {
+  @apply bg-plum text-ivory text-center py-2 px-4 text-sm font-sans;
+}
