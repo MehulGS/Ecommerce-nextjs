@@ -42,11 +42,11 @@ export default function AdminSidebar() {
       <div className="px-4 py-5 border-b border-blush-100">
         <Link href="/admin/dashboard" className="flex items-center gap-2">
           <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blush to-plum flex items-center justify-center">
-            <span className="text-ivory font-serif font-bold">C</span>
+            <span className="text-ivory font-serif font-bold">D</span>
           </div>
           <div>
             <p className="font-serif font-bold text-plum text-lg leading-tight">
-              Craftlove<span className="text-gold">01</span>
+              Diva
             </p>
             <p className="text-xs text-plum/40">Admin Panel</p>
           </div>

@@ -12,10 +12,10 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blush to-ivory/20 flex items-center justify-center">
-                <span className="text-ivory font-serif font-bold text-lg">C</span>
+                <span className="text-ivory font-serif font-bold text-lg">D</span>
               </div>
               <span className="font-serif font-bold text-ivory text-2xl tracking-tight">
-                Craftlove<span className="text-gold">01</span>
+                Diva
               </span>
             </Link>
             <p className="text-ivory/60 text-sm leading-relaxed mb-6">

@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: 'Can I customise a gift?',
-    a: 'Yes! We offer personalised gifting options. DM us on Instagram @Divaour requirements.',
+    a: 'Yes! We offer personalised gifting options. DM us on Instagram @Diva with your requirements.',
   },
   {
     q: 'What payment methods are accepted?',
@@ -404,7 +404,7 @@ export default async function HomePage() {
           <span className="text-5xl mb-6 block">💌</span>
           <h2 className="section-title mb-4">Our Story</h2>
           <p className="text-plum/70 text-lg leading-relaxed mb-4">
-            Divale belief — that a thoughtfully chosen gift can make
+            Diva&apos;s belief — that a thoughtfully chosen gift can make
             someone&apos;s day a little brighter, a little more magical.
           </p>
           <p className="text-plum/60 leading-relaxed mb-4">
@@ -454,10 +454,10 @@ export default async function HomePage() {
           <span className="text-4xl mb-4 block">📸</span>
           <h2 className="section-title mb-2">Follow Our Journey</h2>
           <p className="section-subtitle mb-6">
-            Tag us @Divahance to be featured!
+            Tag us @Diva to be featured!
           </p>
           <a
-            href="https://instagram.com/Diva
+            href="https://instagram.com/Diva"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"

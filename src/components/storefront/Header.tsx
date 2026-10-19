@@ -81,12 +81,11 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 flex-shrink-0">
               <div className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-gradient-to-br from-blush to-plum flex items-center justify-center shadow-soft">
-                <span className="text-ivory font-serif font-bold text-base md:text-lg">C</span>
+                <span className="text-ivory font-serif font-bold text-base md:text-lg">D</span>
               </div>
               <div>
                 <span className="font-serif font-bold text-plum text-xl md:text-2xl tracking-tight">
-                  Craftlove
-                  <span className="text-gold">01</span>
+                  Diva
                 </span>
                 <p className="hidden md:block text-xs text-plum/50 font-sans leading-none">
                   Gifts with love

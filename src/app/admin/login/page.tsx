@@ -15,10 +15,10 @@ export default function AdminLoginPage() {
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-3 mb-4">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blush to-plum flex items-center justify-center shadow-card">
-              <span className="text-ivory font-serif font-bold text-xl">C</span>
+              <span className="text-ivory font-serif font-bold text-xl">D</span>
             </div>
             <span className="font-serif font-bold text-plum text-3xl">
-              Craftlove<span className="text-gold">01</span>
+              Diva
             </span>
           </div>
           <p className="text-plum/50 text-sm">Admin Dashboard</p>
