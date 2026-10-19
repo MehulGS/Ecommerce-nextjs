@@ -25,7 +25,6 @@ A complete, production-ready e-commerce web application for **Diva** — a women
 ### 2. Clone & Install
 
 ```bash
-cd Diva
 npm install
 ```
 
