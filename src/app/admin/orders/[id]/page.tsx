@@ -9,6 +9,8 @@ import Order from '@/models/Order';
 import { formatCurrency } from '@/lib/utils';
 import AdminOrderActions from '@/components/admin/AdminOrderActions';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Order Details — Admin',
   robots: { index: false },

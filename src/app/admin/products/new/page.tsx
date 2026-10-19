@@ -4,6 +4,8 @@ import connectDB from '@/lib/mongodb';
 import Category from '@/models/Category';
 import ProductForm from '@/components/admin/ProductForm';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Add Product — Admin',
   robots: { index: false },

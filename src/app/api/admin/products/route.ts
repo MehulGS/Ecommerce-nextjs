@@ -90,3 +90,57 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Failed to create product' }, { status: 500 });
   }
 }
+
+export async function GET(req: NextRequest) {
+  const admin = await getAdminFromRequest(req);
+  if (!admin) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
+  try {
+    await connectDB();
+    const { searchParams } = new URL(req.url);
+    const search = searchParams.get('search');
+    const status = searchParams.get('status');
+    const stock = searchParams.get('stock');
+    const page = Math.max(1, Number(searchParams.get('page') ?? 1));
+    const limit = Math.min(100, Number(searchParams.get('limit') ?? 20));
+    const skip = (page - 1) * limit;
+
+    const query: Record<string, unknown> = {};
+
+    if (search) {
+      query.$or = [
+        { name: { $regex: search, $options: 'i' } },
+        { sku: { $regex: search, $options: 'i' } },
+      ];
+    }
+    if (status === 'active') query.isActive = true;
+    else if (status === 'inactive') query.isActive = false;
+
+    if (stock === 'low') {
+      query.stock = { $gt: 0, $lte: 5 };
+      query.isActive = true;
+    } else if (stock === 'out') {
+      query.$or = [{ isOutOfStock: true }, { stock: 0 }];
+    }
+
+    const [products, total] = await Promise.all([
+      Product.find(query)
+        .populate('category', 'name slug')
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit)
+        .lean(),
+      Product.countDocuments(query),
+    ]);
+
+    return NextResponse.json({
+      products: JSON.parse(JSON.stringify(products)),
+      total,
+      page,
+      totalPages: Math.ceil(total / limit),
+    });
+  } catch (error) {
+    console.error('Products fetch error:', error);
+    return NextResponse.json({ error: 'Failed to fetch products' }, { status: 500 });
+  }
+}

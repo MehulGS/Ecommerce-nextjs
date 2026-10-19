@@ -8,6 +8,8 @@ import Product from '@/models/Product';
 import { formatCurrency } from '@/lib/utils';
 import AdminProductActions from '@/components/admin/AdminProductActions';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Products — Admin',
   robots: { index: false },

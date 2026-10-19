@@ -6,6 +6,8 @@ import Product from '@/models/Product';
 import Category from '@/models/Category';
 import ProductForm from '@/components/admin/ProductForm';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Edit Product — Admin',
   robots: { index: false },

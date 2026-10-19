@@ -4,6 +4,8 @@ import connectDB from '@/lib/mongodb';
 import Category from '@/models/Category';
 import CategoryManager from '@/components/admin/CategoryManager';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Categories — Admin',
   robots: { index: false },

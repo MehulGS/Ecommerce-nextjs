@@ -4,6 +4,8 @@ import connectDB from '@/lib/mongodb';
 import StoreSettings from '@/models/StoreSettings';
 import StoreSettingsForm from '@/components/admin/StoreSettingsForm';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Store Settings — Admin',
   robots: { index: false },

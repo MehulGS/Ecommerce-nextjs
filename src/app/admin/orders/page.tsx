@@ -6,6 +6,8 @@ import connectDB from '@/lib/mongodb';
 import Order from '@/models/Order';
 import { formatCurrency } from '@/lib/utils';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Orders — Admin',
   robots: { index: false },

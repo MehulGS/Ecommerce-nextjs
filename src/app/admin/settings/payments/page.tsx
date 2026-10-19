@@ -4,6 +4,8 @@ import connectDB from '@/lib/mongodb';
 import StoreSettings from '@/models/StoreSettings';
 import PaymentSettingsForm from '@/components/admin/PaymentSettingsForm';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Payment Settings — Admin',
   robots: { index: false },

@@ -4,6 +4,8 @@ import connectDB from '@/lib/mongodb';
 import Coupon from '@/models/Coupon';
 import CouponManager from '@/components/admin/CouponManager';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Coupons — Admin',
   robots: { index: false },
