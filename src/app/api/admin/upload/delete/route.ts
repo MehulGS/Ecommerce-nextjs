@@ -1,13 +1,13 @@
 /**
  * DELETE /api/admin/upload/delete
  *
- * Authenticated admin-only file deletion.
- * Body: { url: string, category: 'products' | 'qr' }
+ * Authenticated admin-only image deletion from Vercel Blob.
+ * Body: { url: string }  — the full Vercel Blob URL to delete
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { del } from '@vercel/blob';
 import { getAdminFromRequest } from '@/lib/auth';
-import { deleteUploadedFile, type UploadCategory } from '@/lib/upload';
 
 export async function DELETE(req: NextRequest) {
   const admin = await getAdminFromRequest(req);
@@ -16,18 +16,17 @@ export async function DELETE(req: NextRequest) {
   }
 
   try {
-    const { url, category } = await req.json() as { url: string; category: UploadCategory };
+    const body = await req.json() as { url?: string };
+    const { url } = body;
 
     if (!url || typeof url !== 'string') {
       return NextResponse.json({ error: 'Missing url' }, { status: 400 });
     }
 
-    const allowed: UploadCategory[] = ['products', 'qr'];
-    if (!allowed.includes(category)) {
-      return NextResponse.json({ error: 'Invalid category' }, { status: 400 });
+    // Only delete Vercel Blob URLs — skip legacy local /uploads/... paths
+    if (url.startsWith('https://')) {
+      await del(url, { token: process.env.BLOB_IMAGE_READ_WRITE_TOKEN });
     }
-
-    deleteUploadedFile(url, category);
 
     return NextResponse.json({ success: true });
   } catch (err) {

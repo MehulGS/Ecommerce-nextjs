@@ -124,6 +124,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
+                unoptimized={selectedImage.url.startsWith('/uploads/')}
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center">
@@ -170,6 +171,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                     fill
                     className="object-cover"
                     sizes="80px"
+                    unoptimized={img.url.startsWith('/uploads/')}
                   />
                 </button>
               ))}
@@ -396,6 +398,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               fill
               className="object-contain"
               sizes="100vw"
+              unoptimized={selectedImage.url.startsWith('/uploads/')}
             />
           </div>
           <button

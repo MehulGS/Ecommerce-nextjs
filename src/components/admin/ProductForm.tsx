@@ -168,16 +168,16 @@ export default function ProductForm({ categories, product }: ProductFormProps) {
 
   const removeImage = async (index: number) => {
     const img = images[index];
-    // Only attempt server deletion for server-hosted images
-    if (img.url.startsWith('/uploads/')) {
+    // Delete from Vercel Blob for hosted images, skip local /uploads/ legacy paths
+    if (img.url.startsWith('https://')) {
       try {
         await fetch('/api/admin/upload/delete', {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ url: img.url, category: 'products' }),
+          body: JSON.stringify({ url: img.url }),
         });
       } catch {
-        // Non-fatal — the file might not exist yet or the request failed
+        // Non-fatal — best-effort cleanup
       }
     }
     setImages((prev) => prev.filter((_, i) => i !== index));

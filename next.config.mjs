@@ -2,6 +2,13 @@
 const nextConfig = {
   images: {
     remotePatterns: [
+      // Vercel Blob — product and QR images
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+        port: '',
+        pathname: '/**',
+      },
       // Keep placehold.co for placeholder images used in demo data
       {
         protocol: 'https',
