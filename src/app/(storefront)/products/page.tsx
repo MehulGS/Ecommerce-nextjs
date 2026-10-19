@@ -8,6 +8,9 @@ import ProductCard, { ProductCardData } from '@/components/ui/ProductCard';
 import ProductFilters from '@/components/product/ProductFilters';
 import ProductSort from '@/components/product/ProductSort';
 
+// Always fetch fresh data — never serve a stale cached page
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: 'All Products',
   description: 'Browse our complete collection of Korean earrings, cute jewellery, scrunchies, accessories and gift hampers.',

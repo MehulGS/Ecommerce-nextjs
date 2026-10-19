@@ -7,6 +7,9 @@ import Product from '@/models/Product';
 import Category from '@/models/Category';
 import ProductCard, { ProductCardData } from '@/components/ui/ProductCard';
 
+// Always fetch fresh data — never serve a stale cached page
+export const revalidate = 0;
+
 async function getFeaturedProducts() {
   try {
     await connectDB();

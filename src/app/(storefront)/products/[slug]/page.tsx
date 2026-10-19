@@ -7,6 +7,9 @@ import Category from '@/models/Category';
 import ProductDetail from '@/components/product/ProductDetail';
 import ProductCard, { ProductCardData } from '@/components/ui/ProductCard';
 
+// Always fetch fresh data — never serve a stale cached page
+export const revalidate = 0;
+
 interface PageProps {
   params: { slug: string };
 }
