@@ -15,7 +15,7 @@ export async function GET() {
 
     if (!settings) {
       return NextResponse.json({
-        storeName: 'Craftlove01',
+        storeName: 'Diva',
         paymentMode: 'static_qr',
         freeShippingThreshold: 999,
         standardShippingCharge: 79,

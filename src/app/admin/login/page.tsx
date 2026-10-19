@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import AdminLoginForm from '@/components/admin/AdminLoginForm';
 
 export const metadata: Metadata = {
-  title: 'Admin Login — Craftlove01',
+  title: 'Admin Login — Diva',
   robots: { index: false, follow: false },
 };
 

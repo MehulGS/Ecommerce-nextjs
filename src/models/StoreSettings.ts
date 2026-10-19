@@ -35,11 +35,11 @@ export interface IStoreSettings extends Document {
 
 const StoreSettingsSchema = new Schema<IStoreSettings>(
   {
-    storeName: { type: String, default: 'Craftlove01' },
+    storeName: { type: String, default: 'Diva' },
     tagline: { type: String, default: 'Gifts with love, crafted with care' },
     logoUrl: { type: String },
     logoPublicId: { type: String },
-    email: { type: String, default: 'hello@craftlove01.com' },
+    email: { type: String, default: 'hello@Diva.com' },
     phone: { type: String, default: '+91 9999999999' },
     address: { type: String },
     instagramUrl: { type: String },

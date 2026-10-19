@@ -93,7 +93,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {
   }
 }
 
-const CART_STORAGE_KEY = 'craftlove01_cart';
+const CART_STORAGE_KEY = 'Diva_cart';
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(cartReducer, {

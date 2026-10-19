@@ -25,7 +25,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-3">
               <a
-                href="https://instagram.com/craftlove01"
+                href="https://instagram.com/Diva"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-ivory/10 hover:bg-blush rounded-full flex items-center justify-center transition-colors text-ivory text-sm font-bold"
@@ -34,7 +34,7 @@ export default function Footer() {
                 📸
               </a>
               <a
-                href="https://facebook.com/craftlove01"
+                href="https://facebook.com/Diva"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-ivory/10 hover:bg-blush rounded-full flex items-center justify-center transition-colors"
@@ -43,7 +43,7 @@ export default function Footer() {
                 <ExternalLink className="w-4 h-4" />
               </a>
               <a
-                href="mailto:hello@craftlove01.com"
+                href="mailto:hello@Diva.com"
                 className="w-9 h-9 bg-ivory/10 hover:bg-blush rounded-full flex items-center justify-center transition-colors"
                 aria-label="Email"
               >
@@ -135,11 +135,11 @@ export default function Footer() {
                 +91 99999 99999
               </a>
               <a
-                href="mailto:hello@craftlove01.com"
+                href="mailto:hello@Diva.com"
                 className="flex items-center gap-2 text-sm hover:text-ivory transition-colors"
               >
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                hello@craftlove01.com
+                hello@Diva.com
               </a>
               <div className="flex items-start gap-2 text-sm text-ivory/60">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
@@ -154,7 +154,7 @@ export default function Footer() {
       <div className="border-t border-ivory/10">
         <div className="container-wide py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-ivory/50">
           <p>
-            © {new Date().getFullYear()} Craftlove01. All rights reserved.
+            © {new Date().getFullYear()} Diva. All rights reserved.
           </p>
           <p className="flex items-center gap-1">
             Made with <Heart className="w-3.5 h-3.5 text-blush fill-blush" /> for gifting

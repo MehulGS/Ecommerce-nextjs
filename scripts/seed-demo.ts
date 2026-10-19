@@ -28,7 +28,7 @@ const ProductSchema = new mongoose.Schema({
   tags: [String], specifications: [{ key: String, value: String }],
 }, { timestamps: true });
 
-const DEMO_PLACEHOLDER = 'https://placehold.co/400x400/f9b8cb/3d1c3c?text=Craftlove01';
+const DEMO_PLACEHOLDER = 'https://placehold.co/400x400/f9b8cb/3d1c3c?text=Diva';
 
 const categories = [
   { name: 'Korean Earrings', slug: 'korean-earrings', description: 'Trendy Korean-inspired earrings', isActive: true, sortOrder: 1 },

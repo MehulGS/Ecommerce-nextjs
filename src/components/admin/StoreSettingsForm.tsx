@@ -24,7 +24,7 @@ interface Settings {
 
 export default function StoreSettingsForm({ initialSettings }: { initialSettings: Settings | null }) {
   const [form, setForm] = useState<Settings>({
-    storeName: initialSettings?.storeName ?? 'Craftlove01',
+    storeName: initialSettings?.storeName ?? 'Diva',
     tagline: initialSettings?.tagline ?? '',
     email: initialSettings?.email ?? '',
     phone: initialSettings?.phone ?? '',
@@ -108,7 +108,7 @@ export default function StoreSettingsForm({ initialSettings }: { initialSettings
           </div>
           <div>
             <label className="label">Instagram Username</label>
-            <input type="text" value={form.instagramUsername} onChange={(e) => update('instagramUsername', e.target.value)} className="input-field" placeholder="@craftlove01" />
+            <input type="text" value={form.instagramUsername} onChange={(e) => update('instagramUsername', e.target.value)} className="input-field" placeholder="@Diva" />
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">

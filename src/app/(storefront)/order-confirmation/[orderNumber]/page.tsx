@@ -144,7 +144,7 @@ export default async function OrderConfirmationPage({ params }: { params: { orde
         <div className="flex gap-3 justify-center">
           <Link href="/" className="btn-primary">Continue Shopping</Link>
           <a
-            href={`https://wa.me/?text=Order%20${order.orderNumber}%20placed%20on%20Craftlove01`}
+            href={`https://wa.me/?text=Order%20${order.orderNumber}%20placed%20on%20Diva`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary"

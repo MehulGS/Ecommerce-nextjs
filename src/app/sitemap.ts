@@ -4,7 +4,7 @@ import Product from '@/models/Product';
 import Category from '@/models/Category';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://craftlove01.com';
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://Diva.com';
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'daily', priority: 1 },

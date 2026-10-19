@@ -1,6 +1,6 @@
-# Craftlove01 — E-Commerce Store
+# Diva — E-Commerce Store
 
-A complete, production-ready e-commerce web application for **Craftlove01** — a women's gifting and accessories store selling Korean earrings, cute jewellery, scrunchies, hair accessories, and gift hampers.
+A complete, production-ready e-commerce web application for **Diva** — a women's gifting and accessories store selling Korean earrings, cute jewellery, scrunchies, hair accessories, and gift hampers.
 
 ## Technology Stack
 
@@ -25,7 +25,7 @@ A complete, production-ready e-commerce web application for **Craftlove01** — 
 ### 2. Clone & Install
 
 ```bash
-cd craftlove01
+cd Diva
 npm install
 ```
 
@@ -37,7 +37,7 @@ cp .env.example .env.local
 
 **Required:**
 ```env
-MONGODB_URI=mongodb://localhost:27017/craftlove01
+MONGODB_URI=mongodb://localhost:27017/Diva
 JWT_SECRET=your-random-32-char-jwt-secret
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
@@ -135,7 +135,7 @@ Download your QR image from Google Pay, PhonePe, Paytm, or your bank's merchant 
 docker run -d -p 27017:27017 --name mongo mongo:7
 ```
 
-Set `MONGODB_URI=mongodb://localhost:27017/craftlove01`
+Set `MONGODB_URI=mongodb://localhost:27017/Diva`
 
 > **Note:** MongoDB transactions for atomic stock deduction require a replica set. Use Atlas in production, or start local MongoDB with `mongod --replSet rs0` and run `rs.initiate()`.
 
@@ -267,4 +267,4 @@ uploads/
 
 ## License
 
-Private — Craftlove01 Store. All rights reserved.
+Private — Diva Store. All rights reserved.

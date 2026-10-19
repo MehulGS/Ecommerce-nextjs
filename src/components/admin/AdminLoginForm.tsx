@@ -52,7 +52,7 @@ export default function AdminLoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="input-field pl-10"
-            placeholder="admin@craftlove01.com"
+            placeholder="admin@Diva.com"
             required
             autoComplete="email"
           />

@@ -5,8 +5,8 @@ import { CartProvider } from '@/contexts/CartContext';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Craftlove01 — Gifts with Love, Crafted with Care',
-    template: '%s | Craftlove01',
+    default: 'Diva — Gifts with Love, Crafted with Care',
+    template: '%s | Diva',
   },
   description:
     'Discover beautiful Korean earrings, cute jewellery, scrunchies, hair accessories, and heartfelt gift hampers for every occasion. Shop premium gifts curated with love.',
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: process.env.NEXT_PUBLIC_APP_URL,
-    siteName: 'Craftlove01',
-    title: 'Craftlove01 — Gifts with Love, Crafted with Care',
+    siteName: 'Diva',
+    title: 'Diva — Gifts with Love, Crafted with Care',
     description:
       'Premium Korean earrings, cute jewellery, and heartfelt gift hampers for every occasion.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Craftlove01',
+    title: 'Diva',
     description: 'Gifts with love, crafted with care.',
   },
   robots: {
